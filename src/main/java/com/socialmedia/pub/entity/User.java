@@ -45,7 +45,7 @@ public class User {
     @JoinTable(
             name = "user_follows",
             joinColumns = @JoinColumn(name = "follower_id"),
-            inverseJoinColumns = @JoinColumn(name = "follower_id")
+            inverseJoinColumns = @JoinColumn(name = "followee_id")
     )
     private Set<User> following = new HashSet<>();
 
