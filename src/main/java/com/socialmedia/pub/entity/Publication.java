@@ -30,8 +30,11 @@ public class Publication {
 
     @ManyToOne
     @JoinColumn(name = "author_id", nullable = false)
-    private User author;
+    private User user;
 
     @Column(nullable = false)
     private Date creationDate;
+
+    @Column(name = "likes")
+    private int likesCount;
 }
